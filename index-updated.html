@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pontocom - Informática & Designer Gráfico</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #1C2526;
+            overflow-x: hidden;
+            background-color: #FFFFFF;
+        }
+
+        .container {
+            max-width: 1700px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Updated Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #E31E24;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-brand:hover {
+            color: white;
+        }
+
+        .cursor-icon {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.75rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .nav-brand:hover .cursor-icon {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .cursor-icon svg {
+            width: 2rem;
+            height: 2rem;
+            color: white;
+            stroke-width: 2;
+        }
+
+        .nav-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: white;
+            line-height: 1.2;
+        }
+
+        .nav-subtitle {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 0.2rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 0.25rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-toggle:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .hamburger {
+            width: 1.5rem;
+            height: 2px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggle.active .hamburger:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .nav-toggle.active .hamburger:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.active .hamburger:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* Main content adjustment */
+        .main-content {
+            padding-top: 100px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #FFE6E6, #FFFFFF);
+        }
+
+        .welcome-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .welcome-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #E31E24;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-text {
+            font-size: 1.25rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #E31E24;
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .nav-link {
+                padding: 0.75rem 1rem;
+                width: 100%;
+                text-align: center;
+                border-radius: 0.5rem;
+            }
+
+            .nav-link:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-title {
+                font-size: 1.5rem;
+            }
+
+            .nav-subtitle {
+                font-size: 0.65rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-brand {
+                gap: 0.75rem;
+            }
+
+            .cursor-icon {
+                padding: 0.5rem;
+            }
+
+            .cursor-icon svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            .nav-title {
+                font-size: 1.25rem;
+            }
+
+            .nav-subtitle {
+                font-size: 0.6rem;
+            }
+
+            .welcome-card {
+                margin: 1rem;
+                padding: 2rem;
+            }
+
+            .welcome-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <nav class="nav">
+            <a href="#inicio" class="nav-brand">
+                <div class="cursor-icon">
+                    <!-- Cursor/Mouse pointer SVG -->
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5"/>
+                    </svg>
+                </div>
+                <div class="nav-text">
+                    <span class="nav-title">pontocom</span>
+                    <span class="nav-subtitle">INFORMÁTICA E DESIGN GRÁFICO</span>
+                </div>
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#quem-somos" class="nav-link">Quem Somos?</a>
+                <a href="#servicos" class="nav-link">Os Nossos Serviços</a>
+                <a href="#aspectos-gerais" class="nav-link">Aspectos Gerais</a>
+                <a href="#fale-connosco" class="nav-link">Fale Connosco</a>
+            </div>
+
+            <button class="nav-toggle" id="nav-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="welcome-card">
+            <h1 class="welcome-title">pontocom</h1>
+            <p class="welcome-text">
+                Bem-vindos à sua empresa de informática e design gráfico de confiança. 
+                Transformamos ideias em soluções digitais criativas e inovadoras.
+            </p>
+        </div>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        navToggle.addEventListener('click', function() {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pontocom - Informática & Design Gráfico</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <nav class="nav">
+            <a href="#inicio" class="nav-brand">
+                <div class="cursor-icon">
+                    <!-- Cursor/Mouse pointer SVG -->
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5"/>
+                    </svg>
+                </div>
+                <div class="nav-text">
+                    <span class="nav-title">pontocom</span>
+                    <span class="nav-subtitle">INFORMÁTICA E DESIGN GRÁFICO</span>
+                </div>
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#quem-somos" class="nav-link">Quem Somos?</a>
+                <a href="#servicos" class="nav-link">Os Nossos Serviços</a>
+                <a href="#aspectos-gerais" class="nav-link">Aspectos Gerais</a>
+                <a href="#fale-connosco" class="nav-link">Fale Connosco</a>
+            </div>
+
+            <button class="nav-toggle" id="nav-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg">
+            <div class="floating-elements" id="floating-elements"></div>
+            <div class="mouse-follower" id="mouse-follower"></div>
+        </div>
+        
+        <div class="container">
+            
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-accent">pontocom</span>
+                        <br>
+                        <span class="title-main">Informática &</span>
+                        <br>
+                        <span class="title-secondary">Design Gráfico</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Cuidamos da <span class="text-accent">visibilidade</span> e 
+                        <span class="text-secondary">reconhecimento</span> de diferentes marcas e empresas 
+                        através de soluções digitais <span class="text-gradient">criativas e inovadoras</span>.
+                    </p>
+
+                    <div class="hero-tags">
+                        <div class="tag tag-orange">
+                            <span>💻</span>
+                            <span>Informática</span>
+                        </div>
+                        <div class="tag tag-red">
+                            <span>🎨</span>
+                            <span>Design Gráfico</span>
+                        </div>
+                        <div class="tag tag-orange">
+                            <span>⚡</span>
+                            <span>Marketing Digital</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="#quem-somos" class="cta-button">
+                            <span>Conheça Nossos Serviços</span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-code">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <div class="dot red"></div>
+                                <div class="dot yellow"></div>
+                                <div class="dot green"></div>
+                            </div>
+                            <span class="code-title">pontocom.js</span>
+                            <div class="code-status">
+                                <div class="status-dot"></div>
+                                <span>Live</span>
+                            </div>
+                        </div>
+                        <div class="code-content" id="code-content">
+                            <div class="code-line">
+                                <span class="line-number">1</span>
+                                <span class="code-text">const empresa = {</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">2</span>
+                                <span class="code-text">  nome: 'pontocom Informática',</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">3</span>
+                                <span class="code-text">  especialidade: 'Design & TI',</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">4</span>
+                                <span class="code-text">  fundacao: 2021,</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">5</span>
+                                <span class="code-text">  missao: 'Cuidar da visibilidade',</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">6</span>
+                                <span class="code-text">  servicos: ['Web', 'Design', 'Marketing'],</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">7</span>
+                                <span class="code-text">  clientes: 'Satisfeitos',</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">8</span>
+                                <span class="code-text">  qualidade: 'Premium'</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">9</span>
+                                <span class="code-text">};</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="quem-somos" class="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span>⭐</span>
+                    <span>Nossa História</span>
+                </div>
+                <h2 class="section-title">Quem Somos?</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-description">
+                    <div class="description-card">
+                        <p>
+                            A <span class="text-gradient">pontocom</span> é uma empresa que se dedica na prestação de serviços de informática e design gráfico. 
+                            O nosso objectivo é suprir a demanda dos moçambicanos na área digital, com mais destaque em marketing, 
+                            onde nos encarregamos em gerir e promover diferentes marcas, por meios digitais como plataformas e redes sociais.
+                        </p>
+                        <p>
+                            Também nos dedicamos em realizar montagem e assistência de aparelhos informáticos de uso no escritório.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon orange">⏰</div>
+                        <div class="stat-number">
+                            <span id="years-counter">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <div class="stat-label">Anos de Experiência</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon red">👥</div>
+                        <div class="stat-number">
+                            <span id="clients-counter">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <div class="stat-label">Clientes Satisfeitos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon orange">🎯</div>
+                        <div class="stat-number">
+                            <span id="projects-counter">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <div class="stat-label">Projectos Concluídos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon red">🏆</div>
+                        <div class="stat-number">
+                            <span id="solutions-counter">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <div class="stat-label">Soluções Digitais</div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <span class="experience-icon">📈</span>
+                        <h3>Nossa Experiência</h3>
+                    </div>
+                    <p>
+                        Apesar do pouco tempo de existência, a pontocom conta com membros capazes de atender e suprir a demanda dos seus clientes e parceiros, 
+                        garantindo sempre a responsabilidade, qualidade, criatividade, comprometimento e pontualidade.
+                    </p>
+                    <p>
+                        Somos constituídos por um pessoal qualificado com longo tempo de experiência na prestação dos nossos serviços.
+                    </p>
+                </div>
+
+                <div class="clients-section">
+                    <h3 class="clients-title">Nossos Clientes</h3>
+                    <div class="clients-grid">
+                        <div class="client-card">MoveOn Express</div>
+                        <div class="client-card">Fxck Moz</div>
+                        <div class="client-card">Jhar Transportes</div>
+                        <div class="client-card">Fx Beauty</div>
+                        <div class="client-card">Mac & Mag Electrics</div>
+                        <div class="client-card">VM Lirandzo</div>
+                        <div class="client-card">h.h store</div>
+                        <div class="client-card">Shapeless Engineering</div>
+                        <div class="client-card">Ateliê dos Sabores</div>
+                        <div class="client-card">Tafula - Bar, Lounge e Restaurante</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span>✨</span>
+                    <span>Nossos Serviços</span>
+                </div>
+                <h2 class="section-title">Os Nossos Serviços</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    Oferecemos soluções completas em informática e design gráfico para potencializar o seu negócio
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-category">
+                    <div class="category-header">
+                        <div class="category-icon orange">⚙️</div>
+                        <h3 class="category-title">INFORMÁTICA</h3>
+                    </div>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <div class="service-icon orange">🌐</div>
+                            <div class="service-content">
+                                <h4>Criação de websites</h4>
+                                <p>Sites modernos e responsivos com tecnologia de ponta</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon red">📝</div>
+                            <div class="service-content">
+                                <h4>Blogs</h4>
+                                <p>Plataformas de conteúdo dinâmico e interativo</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon orange">📱</div>
+                            <div class="service-content">
+                                <h4>Websites empresariais</h4>
+                                <p>Presença digital profissional e impactante</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon red">📄</div>
+                            <div class="service-content">
+                                <h4>Portfólio digital (Resume / CV)</h4>
+                                <p>Apresentação profissional online personalizada</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon orange">📧</div>
+                            <div class="service-content">
+                                <h4>Email corporativo</h4>
+                                <p>Comunicação empresarial segura e profissional</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon red">📊</div>
+                            <div class="service-content">
+                                <h4>Marketing digital</h4>
+                                <p>Estratégias de crescimento online eficazes</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon orange">🔗</div>
+                            <div class="service-content">
+                                <h4>Gestão de mídia social</h4>
+                                <p>Presença ativa e engajada nas redes sociais</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon red">⚙️</div>
+                            <div class="service-content">
+                                <h4>Gestão de serviços de TIC's</h4>
+                                <p>Suporte técnico completo e especializado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-category">
+                    <div class="category-header">
+                        <div class="category-icon red">✏️</div>
+                        <h3 class="category-title">DESIGN GRÁFICO</h3>
+                    </div>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <div class="service-icon red">✏️</div>
+                            <div class="service-content">
+                                <h4>Logotipos</h4>
+                                <p>Identidade visual única e memorável</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon orange">🖼️</div>
+                            <div class="service-content">
+                                <h4>Flyer e cartazes</h4>
+                                <p>Material promocional impactante e criativo</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon red">💳</div>
+                            <div class="service-content">
+                                <h4>Cartões de visita e banners</h4>
+                                <p>Materiais de marketing profissionais</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon orange">📁</div>
+                            <div class="service-content">
+                                <h4>Portfólios</h4>
+                                <p>Apresentação visual impressionante de trabalhos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-cta">
+                <div class="cta-card">
+                    <div class="cta-header">
+                        <span class="cta-icon">⚡</span>
+                        <h3>DEIXE-NOS CUIDAR DA SUA MARCA</h3>
+                    </div>
+                    <p>Transformamos ideias em soluções digitais que fazem a diferença no mercado</p>
+                    <a href="#fale-connosco" class="cta-button secondary">
+                        <span>Solicitar Orçamento</span>
+                        <span>✨</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="aspectos-gerais" class="mission">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span>🏆</span>
+                    <span>Nossos Pilares</span>
+                </div>
+                <h2 class="section-title">Aspectos Gerais</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    Conheça os pilares que orientam o nosso trabalho e definem a nossa identidade empresarial
+                </p>
+            </div>
+
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-icon orange">🎯</div>
+                    <h3 class="mission-title">MISSÃO</h3>
+                    <p class="mission-description">
+                        Prestar melhor qualidade nos nossos serviços e conquistar a confiança dos nossos clientes. 
+                        A nossa satisfação reside na qualidade dos serviços prestados pela empresa.
+                    </p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon red">👁️</div>
+                    <h3 class="mission-title">VISÃO</h3>
+                    <p class="mission-description">
+                        Criar soluções práticas, criativas, inovadoras e rápidas de modo a melhorar a eficiência 
+                        dos nossos serviços para os nossos clientes.
+                    </p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon orange">❤️</div>
+                    <h3 class="mission-title">VALORES</h3>
+                    <p class="mission-description">
+                        Criatividade, inovação, comprometimento e rapidez.
+                    </p>
+                </div>
+            </div>
+
+            <div class="values-detail">
+                <h3 class="values-title">Os Nossos Valores em Detalhe</h3>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon orange">💡</div>
+                        <h4>Criatividade</h4>
+                        <p>Soluções únicas e inovadoras</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon red">⚡</div>
+                        <h4>Inovação</h4>
+                        <p>Tecnologias de ponta</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon orange">👥</div>
+                        <h4>Comprometimento</h4>
+                        <p>Dedicação total aos projectos</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon red">🚀</div>
+                        <h4>Rapidez</h4>
+                        <p>Entrega ágil e eficiente</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="foundation-year">
+                <div class="foundation-card">
+                    <p>
+                        Existe desde <span class="year-highlight">2021</span>, cuidando da visibilidade de marcas e empresas
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="fale-connosco" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span>💬</span>
+                    <span>Contacto</span>
+                </div>
+                <h2 class="section-title">Fale Connosco</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    Estamos prontos para transformar as suas ideias em realidade digital. Entre em contacto connosco!
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-title">Informações de Contacto</h3>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <div class="contact-icon orange">🌐</div>
+                            <div class="contact-details">
+                                <div class="contact-label">Website</div>
+                                <a href="https://www.pontocom.co.mz">www.pontocom.co.mz</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon red">📧</div>
+                            <div class="contact-details">
+                                <div class="contact-label">Email</div>
+                                <a href="mailto:atendimento@pontocom.co.mz">atendimento@pontocom.co.mz</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon orange">📞</div>
+                            <div class="contact-details">
+                                <div class="contact-label">Contactos</div>
+                                <a href="tel:+258848185421">+258 848 185 421 / 877 185 421</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon red">📍</div>
+                            <div class="contact-details">
+                                <div class="contact-label">Localização</div>
+                                <span>Moçambique</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="business-hours">
+                        <div class="hours-header">
+                            <span class="hours-icon">🕐</span>
+                            <h4>Horário de Atendimento</h4>
+                        </div>
+                        <div class="hours-list">
+                            <div class="hours-item">
+                                <span>Segunda - Sexta:</span>
+                                <span>08:00 - 18:00</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Sábado:</span>
+                                <span>08:00 - 13:00</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Domingo:</span>
+                                <span class="closed">Fechado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3 class="form-title">Envie-nos uma Mensagem</h3>
+                    <form id="contact-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Nome Completo</label>
+                                <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+258 XXX XXX XXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Serviço de Interesse</label>
+                            <select id="service" name="service">
+                                <option value="">Selecione um serviço</option>
+                                <option value="website">Criação de Website</option>
+                                <option value="design">Design Gráfico</option>
+                                <option value="marketing">Marketing Digital</option>
+                                <option value="email">Email Corporativo</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Descreva o seu projecto ou necessidade..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">
+                            <span>Enviar Mensagem</span>
+                            <span class="submit-icon">📤</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-icons">
+                            <span class="footer-icon">💻</span>
+                            <span class="footer-icon">⚡</span>
+                            <span class="footer-icon">🎨</span>
+                        </div>
+                        <div class="footer-text">
+                            <span class="footer-title">pontocom</span>
+                            <span class="footer-subtitle">Informática & Design</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Cuidamos da visibilidade e reconhecimento de diferentes marcas e empresas através de soluções digitais criativas e inovadoras.
+                    </p>
+                    <div class="footer-badge">
+                        <span class="star">⭐</span>
+                        <span>Desde 2021 transformando ideias em realidade</span>
+                    </div>
+                </div>
+
+                <div class="footer-services">
+                    <h3 class="footer-heading">Nossos Serviços</h3>
+                    <ul class="footer-list">
+                        <li><a href="#servicos">Criação de Websites</a></li>
+                        <li><a href="#servicos">Design Gráfico</a></li>
+                        <li><a href="#servicos">Marketing Digital</a></li>
+                        <li><a href="#servicos">Email Corporativo</a></li>
+                        <li><a href="#servicos">Gestão de Redes Sociais</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3 class="footer-heading">Contacto</h3>
+                    <div class="footer-contact-list">
+                        <div class="footer-contact-item">
+                            <span class="contact-type">Email:</span>
+                            <a href="mailto:atendimento@pontocom.co.mz">atendimento@pontocom.co.mz</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="contact-type">Telefone:</span>
+                            <a href="tel:+258848185421">+258 848 185 421</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="contact-type">Telefone:</span>
+                            <a href="tel:+258877185421">+258 877 185 421</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="contact-type">Website:</span>
+                            <a href="https://www.pontocom.co.mz">www.pontocom.co.mz</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © <span id="current-year">2024</span> pontocom Informática e Design Gráfico. Todos os direitos reservados.
+                </p>
+                <p class="footer-made">
+                    Desenvolvido com <span class="heart">❤️</span> em Moçambique
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
